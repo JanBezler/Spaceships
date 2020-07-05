@@ -48,7 +48,7 @@ class Collision(object):
                             self.game.enemyList.remove(item)
                             self.i = -1
                             self.gmover=True
-                            self.yourtime=str(int(time.clock() * 100) / 100)
+                            self.yourtime=str(int(time.process_time() * 100) / 100)
 
             except AttributeError:
                 pass
@@ -63,7 +63,7 @@ class Collision(object):
         self.game.screen.blit(textsurface, (10, 10))
 
         myfont = pg.font.SysFont('Comic Sans MS', 30)
-        textsurface = myfont.render("Time: " + str(int(time.clock() * 100) / 100), True, (180, 240, 110))
+        textsurface = myfont.render("Time: " + str(int(time.process_time() * 100) / 100), True, (180, 240, 110))
         self.game.screen.blit(textsurface, (10, 50))
 
         myfont = pg.font.SysFont('Comic Sans MS', 30)
@@ -93,7 +93,7 @@ class Collision(object):
 
         if not self.gmover:
             try:
-                if int(time.clock() * 10) > self.tm:
+                if int(time.process_time() * 10) > self.tm:
                     self.tm += 0.8
                     self.i+=1
 

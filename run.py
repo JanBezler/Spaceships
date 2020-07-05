@@ -87,11 +87,11 @@ class Game(object):
                     self.enemyList.append(in_enemy)
 
             if self.diff == "Easy":
-                self.enemies = 5 + int(time.clock()/9)
+                self.enemies = 5 + int(time.process_time()/9)
             elif self.diff == "Medium":
-                self.enemies = 7 + int(time.clock()/6.5)
+                self.enemies = 7 + int(time.process_time()/6.5)
             elif self.diff == "Hard":
-                self.enemies = 9 + int(time.clock()/5)
+                self.enemies = 9 + int(time.process_time()/5)
 
             # Taktowanie
             self.tps_delta += self.tps_clock.tick() / 1000.0

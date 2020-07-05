@@ -69,8 +69,8 @@ class Enemy(object):
             self.pos += self.vel
             self.acc *= 0
 
-        if int(float(time.clock())*10) > self.tm+5:
-            self.tm=int(float(time.clock())*10)
+        if int(float(time.process_time())*10) > self.tm+5:
+            self.tm=int(float(time.process_time())*10)
 
             ran1=random.random()
             ran2=random.random()
